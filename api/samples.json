@@ -1,0 +1,5 @@
+[
+  {"id": 1, "name": "First sample", "age":  123, "type": "text"},
+  {"id": 2, "name": "Second sample", "age":  456, "type": "checkbox"},
+  {"id": 2, "name": "text button", "age":  456, "type": "button"}
+]
