@@ -1,18 +1,4 @@
-<div id="content">
-
-
-<!--    <div class="row">-->
-<!--        <big-breadcrumbs items="['Page Header', 'Subtitle']" icon="home"-->
-<!--                         class="col-xs-12 col-sm-7 col-md-7 col-lg-4"></big-breadcrumbs>-->
-<!--        <div smart-include="app/layout/partials/sub-header.tpl.html"></div>-->
-<!--    </div>-->
-
-    <!--
-        The ID "widget-grid" will start to initialize all widgets below
-        You do not need to use widgets if you dont want to. Simply remove
-        the <section></section> and you can use wells or panels instead
-        -->
-    <!-- widget grid -->
+<div id="content" ng-controller="SampleCtrl">
 
     <article class="col-sm-12 col-md-12 col-lg-12">
 
@@ -108,6 +94,11 @@
                             </section>
 
                         </fieldset>
+                        <footer>
+                            <button type="submit" class="btn btn-primary" ng-click="register()">
+                                Register
+                            </button>
+                        </footer>
 
 
 
@@ -225,7 +216,7 @@
                             </div>
                         </div>
                     <div class="padding-10">
-                        <div ng-controller="BasicDatatableCtrl as vm">
+                        <div ng-controller="BasicDatatableCtrl as basicDatatableCtrl">
                             <div ng-include="'app/test/views/my-datatable.html'"></div>
                         </div>
                     </div>
