@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module('app').factory('sampleService', function ($http, $log, APP_CONFIG) {
+angular.module('app.test').factory('sampleService', function ($http, $log, APP_CONFIG) {
 
     var base = APP_CONFIG.apiRootUrl + '/samples';
 

@@ -1,5 +1,6 @@
-angular.module('app').controller('SampleCtrl', function ($scope, sampleService, $log) {
-    $scope.countries = [
+angular.module('app.test').controller('SampleCtrl', function (sampleService, $log) {
+    var vm = this;
+    vm.countries = [
         {key: "US", value: "United States"},
         {key: "GB", value: "United Kingdom"},
         {key: "FR", value: "France"},
@@ -13,10 +14,10 @@ angular.module('app').controller('SampleCtrl', function ($scope, sampleService, 
         {key: "BR", value: "Brazil"}
     ];
 
-    $scope.register = function() {
+    vm.register = function() {
         sampleService.list().then(function (samples) {
-            $scope.countries = [{key: "MY", value: "Malaysia"}];
-            $log.log('samples updated via register', $scope.countries);
+            vm.countries = [{key: "MY", value: "Malaysia"}];
+            $log.log('samples updated via register', vm.countries);
         });
     };
 });

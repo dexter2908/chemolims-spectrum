@@ -1,6 +1,6 @@
-<div id="content" ng-controller="SampleCtrl">
-
-    <article class="col-sm-12 col-md-12 col-lg-12">
+<div id="content" ng-controller="ProjectsDemoCtrl as projects">
+    <div ng-controller="SampleCtrl as sample">
+        <article class="col-sm-12 col-md-12 col-lg-12">
 
         <!-- Widget ID (each widget will need unique ID)-->
         <div jarvis-widget id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false">
@@ -39,21 +39,21 @@
                                     <label class="select">
                                         <select name="country">
                                             <option value="0" selected="" disabled="">Process Unit</option>
-                                            <option value="{{country.key}}" ng-repeat="country in countries" >{{country.value}}</option>
+                                            <option value="{{country.key}}" ng-repeat="country in sample.countries" >{{country.value}}</option>
                                         </select> <i></i> </label>
                                 </section>
                                 <section class="col col-4">
                                     <label class="select">
                                         <select name="country">
                                             <option value="0" selected="" disabled="">Sample Type</option>
-                                            <option value="{{country.key}}" ng-repeat="country in countries" >{{country.value}}</option>
+                                            <option value="{{country.key}}" ng-repeat="country in sample.countries" >{{country.value}}</option>
                                         </select> <i></i> </label>
                                 </section>
                                 <section class="col col-4">
                                     <label class="select">
                                         <select name="country">
                                             <option value="0" selected="" disabled="">Material/Product</option>
-                                            <option value="{{country.key}}" ng-repeat="country in countries" >{{country.value}}</option>
+                                            <option value="{{country.key}}" ng-repeat="country in sample.countries" >{{country.value}}</option>
                                         </select> <i></i> </label>
                                 </section>
                             </div>
@@ -70,14 +70,14 @@
                                     <label class="select">
                                         <select name="country">
                                             <option value="0" selected="" disabled="">Priority</option>
-                                            <option value="{{country.key}}" ng-repeat="country in countries" >{{country.value}}</option>
+                                            <option value="{{country.key}}" ng-repeat="country in sample.countries" >{{country.value}}</option>
                                         </select> <i></i> </label>
                                 </section>
                                 <section class="col col-3">
                                     <label class="select">
                                         <select name="country">
                                             <option value="0" selected="" disabled="">Project Code</option>
-                                            <option value="{{country.key}}" ng-repeat="country in countries" >{{country.value}}</option>
+                                            <option value="{{country.key}}" ng-repeat="country in sample.countries" >{{country.value}}</option>
                                         </select> <i></i> </label>
                                 </section>
                                 <section class="col col-3">
@@ -95,7 +95,7 @@
 
                         </fieldset>
                         <footer>
-                            <button type="submit" class="btn btn-primary" ng-click="register()">
+                            <button type="submit" class="btn btn-primary" ng-click="sample.register()">
                                 Register
                             </button>
                         </footer>
@@ -123,7 +123,7 @@
 
 
     </article>
-
+    </div>
     <article class="col-sm-12 col-md-12 col-lg-12">
         <div jarvis-widget id="wid-id-2" data-widget-editbutton="false" data-widget-custombutton="false">
             <header>
@@ -135,12 +135,9 @@
 
             <!-- widget div-->
             <div>
-
-
                 <!-- widget content -->
                 <div class="widget-body no-padding">
-
-                        <div class="form-group">
+                    <div class="form-group">
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -216,9 +213,9 @@
                             </div>
                         </div>
                     <div class="padding-10">
-                        <div ng-controller="BasicDatatableCtrl as basicDatatableCtrl">
-                            <div ng-include="'app/test/views/my-datatable.html'"></div>
-                        </div>
+                        <div ng-include="'app/test/views/my-datatable.html'"></div>
+                        <br/><br/>
+                        <div ng-include="'app/test/views/project-list.html'"></div>
                     </div>
                 </div>
             </div>

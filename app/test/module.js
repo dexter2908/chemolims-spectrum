@@ -14,5 +14,16 @@ angular.module('app.test', ['ui.router', 'datatables', 'datatables.bootstrap'])
                         templateUrl: 'app/test/views/sample-test.html'
                     }
                 }
+            })
+            .state('app.test.projects', {
+                url: '/projects',
+                data: {
+                    title: 'Projects'
+                },
+                views: {
+                    "content@app": {
+                        templateUrl: 'app/test/views/project-list.html'
+                    }
+                }
             });
     });
