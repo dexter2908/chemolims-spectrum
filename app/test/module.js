@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module('app.test', ['ui.router'])
+angular.module('app.test', ['ui.router', 'datatables', 'datatables.bootstrap'])
 
     .config(function ($stateProvider) {
         $stateProvider
