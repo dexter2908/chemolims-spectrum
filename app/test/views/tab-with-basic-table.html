@@ -1,0 +1,33 @@
+<div id="content" class="padding-10">
+    <div class="widget-body">
+        <ul id="myTab1" class="nav nav-tabs bordered">
+            <li class="active">
+                <a href="#s1" data-toggle="tab">Open Work</a>
+            </li>
+            <li>
+                <a href="#s2" data-toggle="tab">To Be Collected</a>
+            </li>
+            <li>
+                <a href="#s3" data-toggle="tab">Result of the Shift</a>
+            </li>
+            <li>
+                <a href="#s4" data-toggle="tab">Sample List</a>
+            </li>
+        </ul>
+
+        <div id="myTabContent1" class="tab-content padding-10">
+            <div class="tab-pane fade in active" id="s1">
+                <div ui-view="openWorkTable"></div>
+            </div>
+            <div class="tab-pane fade" id="s2">
+                <div ui-view="ToBeCollectedTable"></div>
+            </div>
+            <div class="tab-pane fade" id="s3">
+                <div ui-view="ResultOfShiftTable"></div>
+            </div>
+            <div class="tab-pane fade" id="s4">
+                <div ui-view="SampleListTable"></div>
+            </div>
+        </div>
+    </div>
+</div>

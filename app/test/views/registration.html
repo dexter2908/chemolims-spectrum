@@ -1,0 +1,120 @@
+<article class="col-sm-12 col-md-12 col-lg-12">
+        <!-- Widget ID (each widget will need unique ID)-->
+        <div jarvis-widget id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false">
+            <!-- widget options:
+                usage: <div jarvis-widget id="wid-id-0" data-widget-editbutton="false">
+
+                data-widget-colorbutton="false"
+                data-widget-editbutton="false"
+                data-widget-togglebutton="false"
+                data-widget-deletebutton="false"
+                data-widget-fullscreenbutton="false"
+                data-widget-custombutton="false"
+                data-widget-collapsed="true"
+                data-widget-sortable="false"
+
+            -->
+            <header>
+                <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+
+                <h2>Sample Registration </h2>
+
+            </header>
+
+            <!-- widget div-->
+            <div>
+
+
+                <!-- widget content -->
+                <div class="widget-body no-padding">
+
+                    <form id="checkout-form" class="smart-form" novalidate="novalidate">
+
+                        <fieldset>
+                            <div class="row">
+                                <section class="col col-4">
+                                    <label class="select">
+                                        <select name="country">
+                                            <option value="0" selected="" disabled="">Process Unit</option>
+                                            <option value="{{processUnit.processunitcode}}" ng-repeat="processUnit in registration.processUnits" >{{processUnit.processunitdescription}}</option>
+                                        </select> <i></i> </label>
+                                </section>
+                                <section class="col col-4">
+                                    <label class="select">
+                                        <select name="country">
+                                            <option value="0" selected="" disabled="">Sample Type</option>
+                                            <option value="{{sampleType.sampletypedescription}}" ng-repeat="sampleType in registration.sampleTypes" >{{sampleType.sampletypecode}}</option>
+                                        </select> <i></i> </label>
+                                </section>
+                                <section class="col col-4">
+                                    <label class="select">
+                                        <select name="country">
+                                            <option value="0" selected="" disabled="">Material/Product</option>
+                                            <option value="{{material.processunitcode}}" ng-repeat="material in registration.materials" >{{material.supplier}}</option>
+                                        </select> <i></i> </label>
+                                </section>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <div class="row">
+                                <section class="col col-3">
+                                    <label class="input"> <i class="icon-append fa fa-calendar"></i>
+                                        <input type="text" name="startdate" id="startdate" data-smart-datepicker data-min-restrict="#finishdate" placeholder="Sampling Date/Time">
+                                    </label>
+                                </section>
+                                <section class="col col-3">
+                                    <label class="select">
+                                        <select name="country">
+                                            <option value="0" selected="" disabled="">Priority</option>
+                                            <option value="{{country.key}}" ng-repeat="country in registration.countries" >{{country.value}}</option>
+                                        </select> <i></i> </label>
+                                </section>
+                                <section class="col col-3">
+                                    <label class="select">
+                                        <select name="country">
+                                            <option value="0" selected="" disabled="">Project Code</option>
+                                            <option value="{{country.key}}" ng-repeat="country in registration.countries" >{{country.value}}</option>
+                                        </select> <i></i> </label>
+                                </section>
+                                <section class="col col-3">
+                                    <label for="address2" class="input">
+                                        <input type="text" name="address2" id="bactchNumer" placeholder="Batch Number">
+                                    </label>
+                                </section>
+                            </div>
+
+                            <section>
+                                <label for="address2" class="input">
+                                    <input type="text" name="address2" id="address2" placeholder="Remarks">
+                                </label>
+                            </section>
+
+                        </fieldset>
+                        <footer>
+                            <button type="submit" class="btn btn-primary" ng-click="registration.register()">
+                                Register
+                            </button>
+                        </footer>
+
+
+
+
+                    </form>
+
+                    <!--                    <fieldset>-->
+                    <!--                    <div class="form-group">-->
+
+                    <!--                    </div>-->
+                    <!--                    </fieldset>-->
+
+
+                </div>
+                <!-- end widget content -->
+
+            </div>
+            <!-- end widget div -->
+
+        </div>
+        <!-- end widget -->
+</article>

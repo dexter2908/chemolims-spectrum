@@ -1,0 +1,38 @@
+<table datatable-basic data-table-options="expandableTableCtrl.tableOptions"
+       class="display projects-table table table-striped table-bordered table-hover"
+       cellspacing="0" width="100%">
+    <thead>
+    <tr>
+        <th></th>
+        <th>Test Code</th>
+        <th>Test Name</th>
+        <th>Method</th>
+        <th>Unit</th>
+        <th>Condition</th>
+        <th>Upper Limit</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <caption class="smart-datatable-child-format" data-child-control="td.details-button-only button">
+        <table cellpadding="5" cellspacing="0" border="0"
+               class="table table-hover table-condensed">
+            <tr>
+                <td style="width:100px">Test ID:</td>
+                <td ng-bind-html="d.testid"></td>
+            </tr>
+            <tr>
+                <td>Result Type:</td>
+                <td ng-bind-html="d.resulttype"></td>
+            </tr>
+            <tr>
+                <td>Extra info:</td>
+                <td>And any further details here (images etc)...</td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td ng-bind-html="d.testdescription"></td>
+            </tr>
+        </table>
+    </caption>
+</table>
+
