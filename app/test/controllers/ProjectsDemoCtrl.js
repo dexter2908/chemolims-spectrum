@@ -15,7 +15,7 @@ angular.module('app.test').controller('ProjectsDemoCtrl', function ($http, $log)
         "iDisplayLength": 15,
         "columns": [
             {
-                "class":          'details-control',
+                "class":          'details-button-only',
                 "orderable":      false,
                 "data":           null,
                 "defaultContent": '<button class="btn btn-xs btn-default">Details</button>'
